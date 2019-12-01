@@ -1,0 +1,13 @@
+westgate.innotrac.com 65.118.112.53
+   pool member: 192.168.58.62
+westgate.radial.com 65.118.112.54
+   pool member: 192.168.58.126
+renoftp.innotrac.com 65.118.112.225
+   pool member: 192.168.58.43
+renoftp.radial.com 65.118.112.224
+   pool member: 192.168.58.130
+[!!] server not resolved westsftp.innotrac.com
+westsftp.radial.com 65.118.112.221
+   pool member: 192.168.58.123
+[!!] server not resolved nvrepsftp12-ext.innotrac.com
+[!!] server not resolved nvrepsftp12-ext.radial.com
