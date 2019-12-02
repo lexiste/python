@@ -1,0 +1,16 @@
+
+# ignore the file that I store login data in
+login.json
+
+# packaging
+files/
+
+# vim files
+*.swp
+*.swo
+
+# misc
+*.log
+*.bak
+.DS_Store
+
