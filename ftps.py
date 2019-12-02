@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # we need to run in python v3.x to have access to ssl_version
 

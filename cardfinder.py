@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/env python3
 
 import re
 import sys
@@ -13,31 +13,31 @@ def foundCard(line, cardType):
     post = line[(lineLen-4):]
     fillLen = lineLen - 8
     maskedLine = pre + '*' * fillLen + post
-    #print colored("[!] Potential " + cardType + " card found. Regex Match: " + maskedLine, "red")
-    print colored("[!] " + cardType + " matched regex: " + line, "red")
+    #print colored('[!] Potential ' + cardType + ' card found. Regex Match: ' + maskedLine, 'red')
+    print(colored('[!] ', 'red') + cardType + ' matched regex: ' + line)
 
 def findCards(line):
     if re.match('^.*4\d{15}', line) is not None:
-        cardType = "Visa"
+        cardType = 'Visa'
         foundCard(line, cardType)
     elif re.match('^.*5\d{15}', line) is not None:
-        cardType = "Mastercard"
+        cardType = 'Mastercard'
         foundCard(line, cardType)
     elif re.match('^.*3[4,7]\d{13}', line) is not None:
-        cardType = "American Express"
+        cardType = 'American Express'
         foundCard(line, cardType)
 
 def usage():
-    print colored("[!!] pass file name as argument", "red")
+    print(colored('[!!] pass file name as argument', 'red'))
     sys.exit(-1)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     if len(sys.argv) != 2:
         usage()
     start = time.time()
     with open(sys.argv[1]) as fp:
-        print("Looking for cards...\n")
+        print('Looking for cards...\n')
         for line in fp:
             findCards(line.strip())
     end = time.time()
-    print("\nCompleted execution in " + str(end-start) + " seconds")
+    print('\nCompleted execution in ' + str(end-start) + ' seconds')
