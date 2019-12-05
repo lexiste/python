@@ -12,6 +12,6 @@ for h in hostnames:
 
       try:
          addr = socket.gethostbyname(fqdn)
-         print('{} resolves to {}'.format(fqdn, addr))
+         print(colored('[+] ', 'green') + '{} resolves to {}'.format(fqdn, addr))
       except socket.gaierror:
-         print(colored('[!!] ', 'red') + 'could not resolve {}'.format(fqdn))
+         print(colored('[!] ', 'red') + 'could not resolve {}'.format(fqdn))
