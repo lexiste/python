@@ -36,5 +36,5 @@ rule is__Mirai_gen7 {
                 $st07 = "/bin/busybox cat" fullword nocase wide ascii
 
         condition:
-                5 of them
+                3 of them
 }
